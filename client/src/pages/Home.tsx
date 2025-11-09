@@ -74,7 +74,7 @@ export default function Home() {
               <CardContent className="pt-4 text-center">
                 <h3 className="font-semibold text-lg mb-2">Lake Tekapo</h3>
                 <p className="text-muted-foreground">
-                  โบสถ์เล็กกลางวิว ชมดาวยามค่ำคืน หนึ่งในจุดชมดาวที่สวยที่สุดในโลก
+                  โบสถ์เล็กวิวทะเลสาบ ชมดาวยามค่ำคืน หนึ่งในจุดชมดาวที่สวยที่สุดในโลก
                 </p>
               </CardContent>
             </Card>
