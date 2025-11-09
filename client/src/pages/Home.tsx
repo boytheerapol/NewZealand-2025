@@ -12,7 +12,7 @@ export default function Home() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <div className="relative bg-gradient-to-br from-primary via-primary/90 to-primary/80 text-primary-foreground overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1507699622108-4be3abd695ad?q=80&w=2071')] bg-cover bg-center opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('/images/view-of-lake-tekapo-from-mt-john-observatory.webp')] bg-cover bg-center opacity-75"></div>
         <div className="relative container py-16 md:py-24">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
@@ -24,17 +24,6 @@ export default function Home() {
             <p className="text-lg md:text-xl mb-6 opacity-80">
               1 – 8 ธันวาคม 2568
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Button
-                size="lg"
-                variant="secondary"
-                onClick={() => setLocation("/info")}
-                className="text-lg"
-              >
-                <Info className="w-5 h-5 mr-2" />
-                ของฝาก & เตรียมตัว
-              </Button>
-            </div>
           </div>
         </div>
       </div>
@@ -109,16 +98,42 @@ export default function Home() {
           ))}
         </div>
       </div>
+      <div className="container py-12">
+        <h2 className="text-3xl font-bold mb-8 text-center">ข้อมูลเพิ่มเติม</h2>
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6">
+          <Card className="overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <CardContent className="flex flex-wrap gap-4 items-center justify-center">
+          <Button
+            size="lg"
+            variant="secondary"
+            onClick={() => setLocation("/info")}
+            className="text-lg"
+            style={{ backgroundColor: "var(--primary)", color: "var(--primary-foreground)" }}
+          >
+            <Info className="w-5 h-5 mr-2" />
+            ของฝาก & เตรียมตัว
+          </Button>
+        </CardContent>
+          </Card>
+        </div>
+      </div>
 
       {/* Footer */}
       <div className="bg-primary/5 py-8 mt-12">
         <div className="container text-center">
-          <p className="text-muted-foreground">
-            "หนึ่งในเส้นทางที่สวยที่สุดในโลก… รอให้คุณมาสัมผัสด้วยตาตนเอง"
-          </p>
-          <p className="text-sm text-muted-foreground mt-4">
-            เดินทางโดยสายการบิน QANTAS Airways
-          </p>
+            <div className="flex items-center justify-center gap-3 mb-2">
+            <img
+              src="/images/cheerholidays_logo.jpg"
+              alt="Cheerholidays logo"
+              className="w-8 h-8 md:w-10 md:h-10 object-contain"
+            />
+            <span className="text-lg md:text-xl font-semibold text-primary">
+              Cheerholidays
+            </span>
+            </div>
+            <p className="text-sm text-primary mt-4">
+            "วันพักผ่อนอันแสนสบาย กับความทรงจำที่ไม่รู้ลืม"
+            </p>
         </div>
       </div>
     </div>
