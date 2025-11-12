@@ -14,7 +14,7 @@ export default function ImageCarousel({
   images, 
   alt, 
   autoRotate = true, 
-  interval = 4000 
+  interval = 3000 
 }: ImageCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [imageLoaded, setImageLoaded] = useState(false);
