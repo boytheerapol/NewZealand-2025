@@ -28,7 +28,7 @@ export const itineraryData: DayItinerary[] = [
       {
         name: "ท่าอากาศยานสุวรรณภูมิ",
         description: "จุดเริ่มต้นการเดินทางสู่นิวซีแลนด์ เดินทางโดยสายการบิน QANTAS Airways",
-        images: []
+        images: ["/images/qantas.jpg"]
       }
     ],
     highlights: [
