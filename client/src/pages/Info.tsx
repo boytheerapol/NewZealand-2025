@@ -1,4 +1,5 @@
 import { useLocation } from "wouter";
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Gift, Backpack } from "lucide-react";
@@ -7,8 +8,12 @@ import { souvenirs, packingList } from "@/data/itinerary";
 export default function Info() {
   const [, setLocation] = useLocation();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-accent/20">
+    <div className="min-h-screen bg-linear-to-b from-background to-accent/20">
       {/* Header */}
       <div className="bg-primary text-primary-foreground py-8 shadow-lg">
         <div className="container">

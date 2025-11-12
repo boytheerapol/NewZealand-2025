@@ -5,7 +5,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, ArrowUp, MapPin, Hotel, Star } from "lucide-react";
 import { useEffect, useState } from "react";
-import { MapView } from "@/components/Map";
 import ImageCarousel from "@/components/ImageCarousel";
 import AccommodationModal from "@/components/AccommodationModal";
 import Breadcrumb from "@/components/Breadcrumb";
@@ -27,7 +26,6 @@ export default function DayDetail() {
     const handleScroll = () => {
       setShowBackToTop(window.scrollY > 500);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -41,7 +39,7 @@ export default function DayDetail() {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold mb-4">ไม่พบข้อมูลวันที่ {dayId}</h1>
-          <Button onClick={() => setLocation("/")}>
+          <Button onClick={() => setLocation("/")}> 
             <ArrowLeft className="w-4 h-4 mr-2" />
             กลับหน้าหลัก
           </Button>
@@ -51,7 +49,7 @@ export default function DayDetail() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-accent/20">
+    <div className="min-h-screen bg-linear-to-b from-background to-accent/20">
       {/* Header */}
       <div className="bg-primary text-primary-foreground py-8 shadow-lg">
         <div className="container">
@@ -103,7 +101,7 @@ export default function DayDetail() {
           </Card>
         )}
 
-        {/* Google Maps Section (เปลี่ยนเป็นปุ่มเปิด Google Map) */}
+        {/* Google Maps Section (ปุ่มเปิด Google Map) */}
         {day.googleMapUrl && (
           <Card className="mb-8 bg-linear-to-r from-blue-100/60 to-blue-300/30 border-blue-300 shadow-lg">
             <CardHeader>
