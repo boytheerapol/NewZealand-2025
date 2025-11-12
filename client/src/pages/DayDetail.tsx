@@ -103,53 +103,27 @@ export default function DayDetail() {
           </Card>
         )}
 
-        {/* Google Maps Section */}
-        {day.mapRoute && (
-          <Card className="mb-8">
+        {/* Google Maps Section (เปลี่ยนเป็นปุ่มเปิด Google Map) */}
+        {day.googleMapUrl && (
+          <Card className="mb-8 bg-linear-to-r from-blue-100/60 to-blue-300/30 border-blue-300 shadow-lg">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <MapPin className="w-5 h-5 text-primary" />
-                เส้นทางการเดินทาง
+                <MapPin className="w-5 h-5 text-blue-600" />
+                เส้นทางการเดินทางในวันนี้
               </CardTitle>
               <CardDescription>
-                จาก {day.mapRoute.origin} ถึง {day.mapRoute.destination}
+                กดปุ่มเพื่อดูเส้นทางเดินทางและสถานที่ท่องเที่ยวของวันนี้
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="w-full h-[400px] md:h-[500px] rounded-lg overflow-hidden">
-                <MapView
-                  initialCenter={{ lat: -45.0312, lng: 168.6626 }}
-                  initialZoom={8}
-                  onMapReady={(map: google.maps.Map) => {
-                    if (!day.mapRoute || !window.google) return;
-
-                    const directionsService = new window.google.maps.DirectionsService();
-                    const directionsRenderer = new window.google.maps.DirectionsRenderer({
-                      map: map,
-                      suppressMarkers: false,
-                    });
-
-                    const waypoints = day.mapRoute.waypoints?.map(location => ({
-                      location,
-                      stopover: true,
-                    })) || [];
-
-                    directionsService.route(
-                      {
-                        origin: day.mapRoute.origin,
-                        destination: day.mapRoute.destination,
-                        waypoints,
-                        travelMode: window.google.maps.TravelMode.DRIVING,
-                      },
-                      (result: any, status: any) => {
-                        if (status === window.google.maps.DirectionsStatus.OK && result) {
-                          directionsRenderer.setDirections(result);
-                        }
-                      }
-                    );
-                  }}
-                />
-              </div>
+              <Button
+                className="w-full py-4 text-lg font-semibold bg-blue-600 hover:bg-blue-700 text-white rounded-xl shadow-md transition"
+                onClick={() => window.open(day.googleMapUrl, '_blank', 'noopener,noreferrer')}
+                size="lg"
+              >
+                <MapPin className="w-5 h-5 mr-2" />
+                เปิดแผนที่ Google Map
+              </Button>
             </CardContent>
           </Card>
         )}

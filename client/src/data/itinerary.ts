@@ -16,6 +16,7 @@ export interface DayItinerary {
     destination: string;
     waypoints?: string[];
   };
+  googleMapUrl?: string; // เพิ่ม field สำหรับเก็บลิงก์ Google Map
 }
 
 export const itineraryData: DayItinerary[] = [
@@ -40,6 +41,7 @@ export const itineraryData: DayItinerary[] = [
       "สำหรับการ Transit ที่ ซิดนีย์ ❌ ห้ามทำ:อย่าซื้อ Duty Free ของเหลวจากกรุงเทพฯ แล้วถือขึ้นเครื่องโดยหวังจะผ่านไปถึงนิวซีแลนด์",
       "เพราะตอน transit ที่ซิดนีย์ เขาจะให้ทิ้งของเหลวทั้งหมดที่เกิน 100 มล. แม้จะอยู่ในถุงซีลก็ตาม (เคสนี้เกิดบ่อยมากค่ะ 😢)",
     ]
+    // ไม่มี googleMapUrl สำหรับวันแรก
   },
   {
     day: 2,
@@ -69,7 +71,8 @@ export const itineraryData: DayItinerary[] = [
     mapRoute: {
       origin: "Queenstown Airport, New Zealand",
       destination: "Bob's Peak, Queenstown, New Zealand"
-    }
+    },
+    googleMapUrl: "https://www.google.com/maps/dir/Queenstown+Airport+(ZQN)+Sir+Henry+Wigley+Drive,+Frankton,+Queenstown+9300,+New+Zealand/Skyline+Queenstown+Brecon+Street,+Queenstown,+New+Zealand/Holiday+Inn+Express+%26+Suites+Queenstown+by+IHG,+Stanley+And+Sydney+Street,+Queenstown,+New+Zealand/@-45.0253037,168.6184843,12z/data=!3m1!4b1!4m20!4m19!1m5!1m1!1s0xa9d51e48c71097f1:0xf00ef876559b1d0!2m2!1d168.7453351!2d-45.0197977!1m5!1m1!1s0xa9d51d7886446ebd:0x222cee77c8db5fbf!2m2!1d168.6561937!2d-45.0285011!1m5!1m1!1s0xa9d51d0514fbe873:0x7b4f9a0e93425869!2m2!1d168.665904!2d-45.033007!3e0?entry=ttu&g_ep=EgoyMDI1MTEwOS4wIKXMDSoASAFQAw%3D%3D"
   },
   {
     day: 3,
@@ -122,7 +125,8 @@ export const itineraryData: DayItinerary[] = [
       origin: "Queenstown, New Zealand",
       destination: "Queenstown, New Zealand",
       waypoints: ["Walter Peak, New Zealand", "Kawarau Bridge, New Zealand", "Arrowtown, New Zealand"]
-    }
+    },
+    googleMapUrl: "https://www.google.com/maps/dir/Holiday+Inn+Express+%26+Suites+Queenstown+by+IHG/Time+Tripper+Queenstown/RealNZ+%7C+TSS+Earnslaw+Queenstown+Cruise/Kawarau+Gorge+Suspension+Bridge/Parking+lot,+Arrowtown+9302,+New+Zealand/Holiday+Inn+Express+%26+Suites+Queenstown+by+IHG,+Stanley+And+Sydney+Street,+Queenstown,+New+Zealand/@-45.0009077,168.6899484,12.56z/data=!4m38!4m37!1m5!1m1!1s0xa9d51d0514fbe873:0x7b4f9a0e93425869!2m2!1d168.665904!2d-45.033007!1m5!1m1!1s0xa9d51d813af7b6b7:0x14d51f5ee5fee66f!2m2!1d168.6599833!2d-45.032992!1m5!1m1!1s0xa9d51d7a240c5125:0x27bdc0ee1082b4ab!2m2!1d168.6581124!2d-45.0335286!1m5!1m1!1s0xa9d5213395d45a67:0x5b869eaad5f209ab!2m2!1d168.8998691!2d-45.0088448!1m5!1m1!1s0xa9d5187e7c6527a7:0x663c416cb07a4f0!2m2!1d168.8309966!2d-44.9377302!1m5!1m1!1s0xa9d51d0514fbe873:0x7b4f9a0e93425869!2m2!1d168.665904!2d-45.033007!3e0?entry=ttu&g_ep=EgoyMDI1MTEwOS4wIKXMDSoASAFQAw%3D%3D"
   },
   {
     day: 4,
@@ -193,7 +197,8 @@ export const itineraryData: DayItinerary[] = [
       origin: "Queenstown, New Zealand",
       destination: "Mount Cook Village, New Zealand",
       waypoints: ["Cromwell, New Zealand", "Wanaka, New Zealand", "Omarama, New Zealand"]
-    }
+    },
+    googleMapUrl: "https://www.google.com/maps/dir/Holiday+Inn+Express+%26+Suites+Queenstown+by+IHG/Jones+Family+Fruit+Stall/Wanaka+Lavender+Farm/Puzzling+World/That+Wanaka+tree/Lindis+Pass+Viewpoint/High+Country+Salmon/Mt+Cook+Alpine+Salmon+Shop/Peter's+Lookout,+Ben+Ohau,+New+Zealand/Mt+Cook+Lodge+%26+Motels,+Aoraki%2FMount+Cook+National+Park,+Aoraki+%2F+Mount+Cook+National+Park+Glencoe+Access+Road,+Canterbury+Region,+New+Zealand/@-44.5272532,168.5985606,8z/data=!4m62!4m61!1m5!1m1!1s0xa9d51d0514fbe873:0x7b4f9a0e93425869!2m2!1d168.665904!2d-45.033007!1m5!1m1!1s0xa9d52ae974eae357:0x83f172f96ff18273!2m2!1d169.1458602!2d-45.0583953!1m5!1m1!1s0xa9d54ec831f9f6bd:0x7f54350d3a9ec876!2m2!1d169.187222!2d-44.703827!1m5!1m1!1s0xa9d54f268575edf9:0xfa66441c199b7fcf!2m2!1d169.1615767!2d-44.6967084!1m5!1m1!1s0xa9d545f8be1fcb13:0x394008aedefe80b4!2m2!1d169.1175501!2d-44.6983476!1m5!1m1!1s0xa82aa146df4736a5:0x5c1007f3174e73a!2m2!1d169.6453056!2d-44.5879997!1m5!1m1!1s0x6d2adf93b2460ddd:0x41e35fecbe705d5f!2m2!1d170.084506!2d-44.2910697!1m5!1m1!1s0x6d2b1b09bf046139:0x7157b6535b29a985!2m2!1d170.1398959!2d-44.1902195!1m5!1m1!1s0x6d2b02f917b7b285:0x232eb35641a7d822!2m2!1d170.1357847!2d-44.0890299!1m5!1m1!1s0x6d2bb4ad18b9f8d9:0x86c08bc70d6d60bf!2m2!1d170.0987676!2d-43.7363846!3e0?entry=ttu&g_ep=EgoyMDI1MTEwOS4wIKXMDSoASAFQAw%3D%3D"
   },
   {
     day: 5,
@@ -239,7 +244,8 @@ export const itineraryData: DayItinerary[] = [
       origin: "Mount Cook Village, New Zealand",
       destination: "Lake Tekapo, New Zealand",
       waypoints: ["Lake Pukaki, New Zealand"]
-    }
+    },
+    googleMapUrl: "https://www.google.com/maps/dir/Mt+Cook+Lodge+%26+Motels/Blue+Lakes+and+Tasman+Glacier+walks/The+Church+of+the+Good+Shepherd/Lake+Pukaki+Viewing+Spot/University+of+Canterbury+Mt+John+Observatory/Peppers+Bluewater+Resort+Lake+Tekapo,+State+Highway+8,+Lake+Tekapo,+New+Zealand/@-44.0205303,170.3934852,12.34z/data=!4m38!4m37!1m5!1m1!1s0x6d2bb4ad18b9f8d9:0x86c08bc70d6d60bf!2m2!1d170.0987676!2d-43.7363846!1m5!1m1!1s0x6d2bb5c7cf6d83ef:0x663d88df935f582!2m2!1d170.1665557!2d-43.7004395!1m5!1m1!1s0x6d2b7561f47ae97d:0xf88a32d746ffcc02!2m2!1d170.4825055!2d-44.0033759!1m5!1m1!1s0x6d2b1b007b6c878b:0x24d074420d4cef34!2m2!1d170.2012969!2d-44.1774125!1m5!1m1!1s0x6d2b9ff2468db3a9:0x7145019a25a6a78b!2m2!1d170.4641034!2d-43.9852122!1m5!1m1!1s0x6d2b755f10df23bb:0x7c5676fdf7b086d5!2m2!1d170.4727716!2d-44.003384!3e0?entry=ttu&g_ep=EgoyMDI1MTEwOS4wIKXMDSoASAFQAw%3D%3D"
   },
   {
     day: 6,
@@ -274,7 +280,8 @@ export const itineraryData: DayItinerary[] = [
       origin: "Lake Tekapo, New Zealand",
       destination: "Christchurch, New Zealand",
       waypoints: ["Ashburton, New Zealand"]
-    }
+    },
+    googleMapUrl: "https://www.google.com/maps/dir/Peppers+Bluewater+Resort+Lake+Tekapo,+State+Highway+8,+Lake+Tekapo,+New+Zealand/Lake+Tekapo+Farm+Tours+Archiac+Drive,+Lake+Tekapo,+New+Zealand/Ashburton,+New+Zealand/Chateau+on+the+Park+Deans+Avenue,+Riccarton,+Christchurch,+New+Zealand/@-43.5267564,172.6114396,16z/data=!4m26!4m25!1m5!1m1!1s0x6d2b755f10df23bb:0x7c5676fdf7b086d5!2m2!1d170.4727716!2d-44.003384!1m5!1m1!1s0x6d2b757f74308c79:0x8eceb23a0b570c85!2m2!1d170.470868!2d-44.0045318!1m5!1m1!1s0x6d2c316406cecd4b:0x500ef8684799940!2m2!1d171.7447855!2d-43.905386!1m5!1m1!1s0x6d318a5bc997be99:0x8056955a62e8e5e8!2m2!1d172.6113713!2d-43.5265668!3e0?entry=ttu&g_ep=EgoyMDI1MTEwOS4wIKXMDSoASAFQAw%3D%3D"
   },
   {
     day: 7,
@@ -309,7 +316,8 @@ export const itineraryData: DayItinerary[] = [
       origin: "Christchurch, New Zealand",
       destination: "Christchurch, New Zealand",
       waypoints: ["International Antarctic Centre, Christchurch"]
-    }
+    },
+    googleMapUrl: "https://www.google.com/maps/dir/Chateau+on+the+Park+Deans+Avenue,+Riccarton,+Christchurch,+New+Zealand/International+Antarctic+Centre+Orchard+Road,+Christchurch+Airport,+Christchurch,+New+Zealand/Riverside+Market+Oxford+Terrace,+Christchurch+Central+City,+Christchurch,+New+Zealand/Chateau+on+the+Park+-+Christchurch,+a+DoubleTree+by+Hilton,+Deans+Avenue,+Riccarton,+Christchurch,+New+Zealand/@-43.5119451,172.5068485,12z/data=!3m2!4b1!5s0x6d318a185067219f:0xd1f4f63c5978d394!4m26!4m25!1m5!1m1!1s0x6d318a5bc997be99:0x8056955a62e8e5e8!2m2!1d172.6113713!2d-43.5265668!1m5!1m1!1s0x6d31f4b8e0051357:0x286406d90fd344fd!2m2!1d172.547093!2d-43.4884068!1m5!1m1!1s0x6d318b4017db24ad:0x41343c028d68a87c!2m2!1d172.6339121!2d-43.5338417!1m5!1m1!1s0x6d318a5bc997be99:0x8056955a62e8e5e8!2m2!1d172.6113713!2d-43.5265668!3e0?entry=ttu&g_ep=EgoyMDI1MTEwOS4wIKXMDSoASAFQAw%3D%3D"
   },
   {
     day: 8,
