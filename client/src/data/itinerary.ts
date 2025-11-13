@@ -311,13 +311,13 @@ export const itineraryData: DayItinerary[] = [
       "ช้อปปิ้งที่ Riverside Market",
       "ช้อปปิ้งต่อที่ Count Down Supermarket"
     ],
-    accommodation: "Chateau on the Park Hotel – Christchurch",
+    accommodation: "Novotel Christchurch Airport",
     mapRoute: {
       origin: "Christchurch, New Zealand",
       destination: "Christchurch, New Zealand",
       waypoints: ["International Antarctic Centre, Christchurch"]
     },
-    googleMapUrl: "https://www.google.com/maps/dir/Chateau+on+the+Park+Deans+Avenue,+Riccarton,+Christchurch,+New+Zealand/International+Antarctic+Centre+Orchard+Road,+Christchurch+Airport,+Christchurch,+New+Zealand/Riverside+Market+Oxford+Terrace,+Christchurch+Central+City,+Christchurch,+New+Zealand/Chateau+on+the+Park+-+Christchurch,+a+DoubleTree+by+Hilton,+Deans+Avenue,+Riccarton,+Christchurch,+New+Zealand/@-43.5119451,172.5068485,12z/data=!3m2!4b1!5s0x6d318a185067219f:0xd1f4f63c5978d394!4m26!4m25!1m5!1m1!1s0x6d318a5bc997be99:0x8056955a62e8e5e8!2m2!1d172.6113713!2d-43.5265668!1m5!1m1!1s0x6d31f4b8e0051357:0x286406d90fd344fd!2m2!1d172.547093!2d-43.4884068!1m5!1m1!1s0x6d318b4017db24ad:0x41343c028d68a87c!2m2!1d172.6339121!2d-43.5338417!1m5!1m1!1s0x6d318a5bc997be99:0x8056955a62e8e5e8!2m2!1d172.6113713!2d-43.5265668!3e0?entry=ttu&g_ep=EgoyMDI1MTEwOS4wIKXMDSoASAFQAw%3D%3D"
+    googleMapUrl: "https://www.google.com/maps/dir/Chateau+on+the+Park+Deans+Avenue,+Riccarton,+Christchurch,+New+Zealand/International+Antarctic+Centre+Orchard+Road,+Christchurch+Airport,+Christchurch,+New+Zealand/Riverside+Market+Oxford+Terrace,+Christchurch+Central+City,+Christchurch,+New+Zealand/Novotel+Christchurch+Airport+Durey+Road,+Christchurch+Airport,+Christchurch,+New+Zealand/@-43.490373,172.5287537,14z/data=!3m1!5s0x6d318a185067219f:0xd1f4f63c5978d394!4m26!4m25!1m5!1m1!1s0x6d318a5bc997be99:0x8056955a62e8e5e8!2m2!1d172.6113713!2d-43.5265668!1m5!1m1!1s0x6d31f4b8e0051357:0x286406d90fd344fd!2m2!1d172.547093!2d-43.4884068!1m5!1m1!1s0x6d318b4017db24ad:0x41343c028d68a87c!2m2!1d172.6339121!2d-43.5338417!1m5!1m1!1s0x6d31f5fa9c8156e3:0x135f34b1b3a48d3b!2m2!1d172.5420016!2d-43.4880784!3e0?entry=ttu&g_ep=EgoyMDI1MTExMC4wIKXMDSoASAFQAw%3D%3D"
   },
   {
     day: 8,
