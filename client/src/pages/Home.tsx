@@ -123,9 +123,9 @@ export default function Home() {
         <div className="container text-center">
             <div className="flex items-center justify-center gap-3 mb-2">
             <img
-              src="/images/cheerholidays_logo.jpg"
+              src="/images/cheerholidays_logo.png"
               alt="Cheerholidays logo"
-              className="w-8 h-8 md:w-10 md:h-10 object-contain"
+              className="w-8 h-8 md:w-12 md:h-12 object-contain"
             />
             <span className="text-lg md:text-xl font-semibold text-primary">
               Cheerholidays
